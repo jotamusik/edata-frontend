@@ -1,27 +1,60 @@
-# EdataFront
+# Front end exercise
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
-## Development server
+## Environment:  
+* HTML 5 + CSS3 + Bootstrap
+* Javascript/Typescript
+* You can use for example: **Angular**, React, Vue, jQuery, Vanilla JavaScript, ...
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requirements: 
+* We want to show a table with the same data structure used for the REST_API.txt exercise. 
 
-## Code scaffolding
+* It should be possible to sort the data in the table by name and by id. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* All data shall be in memory for the first step. Sample data is provided below:
 
-## Build
+Sample data:
+```json
+ [{
+     "id": ​1,
+     "name": "Felipe",
+     "roles": [
+            "standard",
+        "admimn"
+     ]
+ }, {
+     "id": ​2,
+     "name": "Roberto",
+     "roles": [
+            "standard",
+     ]
+ }, {
+     "id": ​3,
+     "name": "Maria",
+     "roles": [
+            "standard",
+     ]
+ },{
+     "id": ​4,
+     "name": "Rebeca",
+     "roles": [            
+        "admin"
+     ]
+ }
+ ]
+ ```
+* It should be possible to add new entries to the table storing these new entries in memory
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* The start page of the application should be a login page.
 
-## Running unit tests
+* Everyone logged in user can list the users.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Not logged in users should not be able to get any data from the application.
 
-## Running end-to-end tests
+* Only admins can create new users.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Nice to have:
+- If you were able to do this exercise and also the REST_API.txt exercise, it would be nice if you can really connect the two exercises. So instead of doing everything in memory, the REST API is really used.
+- If you know how to do it, tests are welcome
+- Use the cleanest and simplest code as possible
