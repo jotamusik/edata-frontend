@@ -4,14 +4,14 @@
     <nz-form-item>
       <nz-form-control>
         <nz-input-group [nzPrefix]="prefixUser">
-          <input formControlName="username" nz-input placeholder="Username" />
+          <input formControlName="username" nz-input placeholder="Username"/>
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control>
         <nz-input-group [nzPrefix]="prefixLock">
-          <input formControlName="password" nz-input type="password" placeholder="Password" />
+          <input formControlName="password" nz-input type="password" placeholder="Password"/>
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
@@ -22,7 +22,7 @@
             style="min-width: 200px;"
             [(ngModel)]="selectedRoles"
             [ngModelOptions]="{standalone: true}"
-            [nzSize]="size"
+            [nzSize]="roles.length"
             nzMode="multiple"
             nzPlaceHolder="Roles">
             <nz-option *ngFor="let option of roles" [nzLabel]="option.name" [nzValue]="option"></nz-option>

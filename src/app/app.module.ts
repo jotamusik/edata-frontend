@@ -11,13 +11,18 @@ import en from '@angular/common/locales/en';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UsersComponent } from './components/users/users.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { LoginComponent } from './components/login/login.component';
+import { InfoComponent } from './components/info/info.component';
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +31,12 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NgZorroAntdModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   bootstrap: [ AppComponent ],
   providers   : [
-    { provide: NZ_I18N, useValue: es_ES }
+    { provide: NZ_I18N, useValue: es_ES },
+    AuthInterceptor,
   ]
 })
 export class AppModule { }

@@ -1,0 +1,8 @@
+
+<div class="center-content">
+  <nz-card *ngIf="user" nzTitle="{{ user.username }}" class="user-info">
+    <ul *ngFor="let role of user.roles">
+      <li>{{ role.name }}</li>
+    </ul>
+  </nz-card>
+</div>

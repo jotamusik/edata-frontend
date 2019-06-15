@@ -1,7 +1,9 @@
 <nz-layout class="layout" style="height: 100%">
   <nz-header>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item routerLink="/info">Info</li>
       <li nz-menu-item routerLink="/users">Users</li>
+      <li nz-button nzType="primary" nzShape="round" (click)="logout()" class="logout-button">Logout</li>
     </ul>
   </nz-header>
   <nz-content style="padding:25px 50px 0 50px;">

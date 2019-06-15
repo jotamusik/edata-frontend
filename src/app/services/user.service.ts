@@ -24,4 +24,8 @@ export class UserService {
   public getAllRoles(): Observable<Array<Role>> {
     return this.http.get<Array<Role>>(`${environment.apiUrl}${environment.roleEndpoint}`);
   }
+
+  public getLoggedUserInfo(): Observable<User> {
+    return this.http.get<User>(`${environment.apiUrl}${environment.userEndpoint}${environment.userInfoEndpoint}`);
+  }
 }

@@ -4,6 +4,7 @@ import { UserService } from '../../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NewUserRequest } from '../../models/request/newUserRequest';
 import { Role } from '../../models/role';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-users',
@@ -53,8 +54,6 @@ export class UsersComponent implements OnInit {
     newUserRequest.username = this.validateForm.getRawValue()['username'];
     newUserRequest.password = this.validateForm.getRawValue()['password'];
     newUserRequest.roles = this.selectedRoles;
-
-    console.log(newUserRequest);
     this.userService.createNewUser(newUserRequest).subscribe(
       () => {},
       () => {},
@@ -73,8 +72,6 @@ export class UsersComponent implements OnInit {
       users => {
         this.users = users;
         this.displayUsers = users;
-
-        console.log(users);
       }
     );
   }
